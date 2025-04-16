@@ -15,8 +15,8 @@ spec:
       labels:
         app: i27-clothing-dev
     spec:
-      imagePullSecrets:
-      - name: jfrog-registry
+      # imagePullSecrets:
+      # - name: jfrog-registry
       containers:
       - name: i27-clothing-dev
         image: DIT # Image tag will be replaced by shared library
@@ -30,7 +30,7 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8132
-    targetPort: 8132
+  - port: 3000
+    targetPort: 3000
   selector:
     app: i27-clothing-dev 
